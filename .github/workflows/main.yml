@@ -28,6 +28,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Install pip
+        run: |
+          curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+          python3 get-pip.py
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
