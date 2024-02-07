@@ -23,3 +23,9 @@ After validation with **test.py**, the expected outcome is that the CI/CD pipeli
 In this scenario, the application is modified to return "Hello World!"
 
 After validation with **test.py**, the expected outcome is that the CI/CD pipeline should **SUCCEED**.
+
+## Troubleshooting
+
+Initial error message indicated an ImportError while importing modules in the test.py file. 
+
+Fixed the issues with the pipeline by resolving version incompatibilities and ensuring that all dependencies were installed correctly.
