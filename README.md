@@ -15,17 +15,39 @@ The workflow, outlined in **main.yml**, consists of two jobs: build and test.
 ## Scenario 1
 In this scenario, the application is modified to return "Hello CICD!"
 
-After validation with **test.py**, the expected outcome is that the CI/CD pipeline should **FAIL**.
+After validation with **test.py**, the CI/CD pipeline FAILED as expected:
 
-<img src="assets/test.png" alt="test" width="400">
+<img src="assets/test1.png" alt="test" width="400">
+
+<img src="assets/hellocicd.png" alt="test" width="400">
 
 ## Scenario 2
 In this scenario, the application is modified to return "Hello World!"
 
-After validation with **test.py**, the expected outcome is that the CI/CD pipeline should **SUCCEED**.
+After validation with **test.py**, the CI/CD pipeline SUCCEEDED as expected:
+
+<img src="assets/test2.png" alt="test" width="400">
 
 ## Troubleshooting
 
-Initial error message indicated an ImportError while importing modules in the test.py file. 
+ImportError while importing modules in the test.py file. Fixed the issue by resolving version incompatibilities and ensuring that all dependencies were installed correctly.
 
-Fixed the issues with the pipeline by resolving version incompatibilities and ensuring that all dependencies were installed correctly.
+## View Application
+
+You can view and interact with the application inside a Docker container on your local machine.
+
+- On Docker Hub, go to the _Public View_ to retrieve your _Docker Pull Command_.
+
+    ```
+    docker pull [your-username]/[your-docker-image]
+    ```
+
+- Copy and paste the docker pull command into the terminal.
+
+- Run a container using the `docker run` command.
+
+    ```
+    docker run [your-username]/[your-docker-image]
+    ```
+    
+    This command may expose ports or provide other instructions for accessing the application.
